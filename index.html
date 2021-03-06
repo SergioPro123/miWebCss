@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/nav.css" />
+        <link rel="stylesheet" type="text/css" href="css/form.css" />
+        <link rel="stylesheet" type="text/css" href="css/carrousel.css" />
+
+        <title>Ejemplo de una pagina web sin Framework</title>
+    </head>
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="#home" class="active">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Dropdown
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </div>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" style="font-size: 15px" class="icon" onclick="myFunction()">&#9776;</a>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="./img/img1.jpeg" style="width: 100%" />
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="./img/img2.jpeg" style="width: 100%" />
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="./img/img3.jpeg" style="width: 100%" />
+                <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br />
+
+        <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <div class="fondo"></div>
+        <div class="cuerpo">
+            <div class="contenido">
+                <h1>Conceptos Básicos de CSS</h1>
+                <h2>¿Qué es CSS3?</h2>
+                <p>
+                    En sus siglas es <strong>«Cascade Style Scheets»</strong> en español
+                    <strong>«hoja de estilos en cascada» versión 3</strong>, es conocido como lenguaje de diseño gráfico
+                    o estilos css, es utilizado para dar el formato de presentación visual a las páginas web. CSS 3
+                    sirve generalmente para tranformar páginas web con diseños espectaculares con: colores, formato de
+                    texto, imágenes, animaciones, transiciones, diseños responsivos, etc.
+                </p>
+                <h2>¿Qué es HTML5?</h2>
+                <p>
+                    Actualmente en la version 5 y cuyas siglas se lee «Hyper Text Markup Languaje» o en español Lenguaje
+                    de Marcas de Hipertexto. Es el lenguaje estandar de etiquetas utilizado para estructurar y organizar
+                    la información contenida en páginas web.
+                </p>
+                <p>
+                    HTML5 y CSS3 están directamente relacionados a la estructúra y aspecto visual de las paginas web de
+                    internet, con los cuales interactuamos a travéz de los navegadores como: Chrome, Mozile Firefox,
+                    Opera, etc.
+                </p>
+            </div>
+
+            <div class="barra-lateral">
+                <a target="_blank" href="https://www.w3schools.com/css/default.asp"
+                    ><img src="img/css_sintaxis.png"
+                /></a>
+                <div>
+                    <h3>Navegadores Soportados</h3>
+                    <ul>
+                        <li>Chrome</li>
+                        <li>Mozilla</li>
+                        <li>Opera</li>
+                        <li>Safari</li>
+                    </ul>
+                </div>
+                <hr />
+                <form action="">
+                    <p>Nombre:</p>
+                    <input type="text" class="field" /> <br />
+
+                    <p>Correo electrónico:</p>
+                    <input type="text" class="field" /> <br />
+
+                    <p>Asunto:</p>
+                    <input type="text" class="field" /> <br />
+
+                    <p>Mensaje:</p>
+                    <textarea class="field"></textarea> <br />
+
+                    <p class="center-content">
+                        <input type="submit" class="btn btn-green" value="Enviar Datos" />
+                    </p>
+                </form>
+                <div></div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th class="corto">ATRIBUTO</th>
+                        <th class="largo">SIGNIFICADO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th class="gris">Colspan</th>
+                        <td class="gris_claro">
+                            Combina la celda actual con el número de celdas a la derecha que se indique. Por ejemplo
+                            colspan=”3” une esta celda con las dos que tiene a su derecha, formando una combinación de
+                            tres celdas en horizontal.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th class="gris">rowspan</th>
+                        <td class="gris_claro">
+                            Combina la celda actual con el número de celdas hacia abajo que se indique. Por ejemplo
+                            rowspan=”3” une esta celda con las dos que tiene hacia abajo, formando una combinación de
+                            tres celdas en vertical.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="pie">
+            <p>Copyright © 2020 Séptimo Semestre</p>
+        </div>
+
+        <script src="./js/script.js"></script>
+        <script>
+            function myFunction() {
+                var x = document.getElementById('myTopnav');
+                if (x.className === 'topnav') {
+                    x.className += ' responsive';
+                } else {
+                    x.className = 'topnav';
+                }
+            }
+            setTimeout(function () {
+                plusSlides(1);
+            }, 3000);
+        </script>
+    </body>
+</html>
